@@ -1,4 +1,5 @@
 #!/bin/bash
+# don't forget to run `chmod 700 start-geth-aws.sh` to execute this script
 
 me="$(whoami)"
 geth_ps_owner="$(ps -C geth -o ruser= | grep -w $me)"
