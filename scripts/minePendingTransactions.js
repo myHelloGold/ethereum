@@ -1,3 +1,9 @@
+/*
+* reference:
+* https://ethereum.stackexchange.com/a/3152/26362
+* https://github.com/ethereumproject/go-ethereum/wiki/bitchin-tricks#mining
+*/
+
 var datetime = new Date().toLocaleString()
 var mining_threads = 1
 
@@ -11,8 +17,5 @@ function checkWork() {
         console.log(datetime + " - No transactions found. Mining stopped.");
     }
 }
-
-eth.filter("latest", function(err, block) { checkWork(); });
-eth.filter("pending", function(err, block) { checkWork(); });
 
 checkWork();
