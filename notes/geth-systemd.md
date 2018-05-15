@@ -12,7 +12,7 @@ Description=Geth
 Type=simple
 Restart=always
 User=REPLACE_THIS_WITH_THE_MACHINE_USER
-ExecStart=/usr/bin/geth --nodiscover --fast --cache 512 --rpc --rpcaddr 0.0.0.0 --rpcapi 'db,eth,net,web3,personal,admin' --rpccorsdomain '*' --ws --wsaddr 0.0.0.0 --wsapi 'db,eth,net,web3,personal,admin' --wsorigins '*' --verbosity '0' --mine --minerthreads '1'
+ExecStart=/usr/bin/geth --nodiscover --fast --cache 512 --rpc --rpcaddr 0.0.0.0 --rpcapi 'db,eth,net,web3,personal,admin,debug' --rpccorsdomain '*' --ws --wsaddr 0.0.0.0 --wsapi 'db,eth,net,web3,personal,admin,debug' --wsorigins '*' --verbosity '0' --mine --minerthreads '1'
 
 [Install]
 WantedBy=default.target
