@@ -1,5 +1,3 @@
-Work in progress...
-
 #### How to setup two-nodes private blockchain on AWS EC2?
 
 - Part 1 (Required) - Refer [this tutorial](https://blockgeeks.com/two-node-setup-of-a-private-ethereum/)
