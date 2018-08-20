@@ -25,9 +25,9 @@ Example:
 enode://xxx@192.168.0.170:30304?discport=0
 ```
 
-#### How to auto-join the first node after reboot (only for second node)?
+#### How to auto-join the other node after reboot?
 
-Please refer [this guide](https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes).
+Please refer [this guide](https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#static-nodes). You need to do this on both nodes.
 
 Example of `static-nodes.json` file:
 
