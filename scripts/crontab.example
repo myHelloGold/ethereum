@@ -1,2 +1,1 @@
-@reboot $HOME/start_geth.sh
-* * * * * $HOME/minePendingTransactions.sh >> $HOME/mining.log
+@reboot  /home/ubuntu/start-geth-aws.sh
