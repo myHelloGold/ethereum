@@ -19,6 +19,10 @@ ExecStart=/usr/bin/geth --nodiscover --syncmode 'fast' --cache=512 --rpc --rpcad
 WantedBy=default.target
 ```
 
+**Note**
+
+Don't forget to change `REPLACE_THIS_WITH_THE_MACHINE_USER` line above. Run `$ whoami` to get the username.
+
 ### Using The Geth Service
 
 ```
