@@ -4,7 +4,7 @@
 me="$(whoami)"
 geth_ps_owner="$(ps -C geth -o ruser= | grep -w $me)"
 
-cmd="nohup geth --nodiscover --syncmode 'fast' --cache=512 --rpc --rpcaddr=0.0.0.0 --rpcapi='db,eth,net,web3,personal,admin' --rpccorsdomain='*' --ws --wsaddr=0.0.0.0 --wsapi='db,eth,net,web3,personal,admin' --wsorigins='*' --mine --minerthreads='1' --verbosity='0' &>/dev/null &"
+cmd="nohup /usr/bin/geth --nodiscover --syncmode 'fast' --cache=512 --rpc --rpcaddr=0.0.0.0 --rpcapi='db,eth,net,web3,personal,admin' --rpccorsdomain='*' --ws --wsaddr=0.0.0.0 --wsapi='db,eth,net,web3,personal,admin' --wsorigins='*' --mine --minerthreads='1' --verbosity='0' >/dev/null 2>&1 &"
 
 if [ -z "$geth_ps_owner" ]
 then
