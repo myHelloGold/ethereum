@@ -7,6 +7,7 @@ $ sudo nano /etc/systemd/system/geth.service
 
 [Unit]
 Description=Geth
+After=network.target
 
 [Service]
 Type=simple
@@ -21,10 +22,13 @@ WantedBy=default.target
 ### Using The Geth Service
 
 ```
-# Start service
+# Run Geth on startup/reboot
+sudo systemctl enable geth
+
+# Manually run Geth
 sudo systemctl start geth
 
-# Stop service
+# Stop running Geth
 sudo systemctl stop geth
 
 # View all logs
