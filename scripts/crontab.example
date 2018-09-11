@@ -1,1 +1,6 @@
+# --------------------------------------------------------------------------
+# Cron is not needed when systemd is configured correctly
+# https://github.com/myHelloGold/ethereum/blob/master/notes/geth-systemd.md
+# --------------------------------------------------------------------------
+
 @reboot  /home/ubuntu/start-geth-aws.sh
