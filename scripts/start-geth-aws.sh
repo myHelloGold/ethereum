@@ -1,6 +1,11 @@
 #!/bin/bash
 # don't forget to run `chmod 700 start-geth-aws.sh` to execute this script
 
+# --------------------------------------------------------------------------
+# This file is not needed when systemd is configured correctly
+# https://github.com/myHelloGold/ethereum/blob/master/notes/geth-systemd.md
+# --------------------------------------------------------------------------
+
 me="$(whoami)"
 geth_ps_owner="$(ps -C geth -o ruser= | grep -w $me)"
 
