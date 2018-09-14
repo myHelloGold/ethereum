@@ -13,15 +13,17 @@ After=network.target
 Type=simple
 Restart=always
 User=REPLACE_THIS_WITH_THE_MACHINE_USER
-ExecStart=/usr/bin/geth --nodiscover --syncmode 'fast' --cache=512 --rpc --rpcaddr=0.0.0.0 --rpcapi='db,eth,net,web3,personal,admin' --rpccorsdomain='*' --ws --wsaddr=0.0.0.0 --wsapi='db,eth,net,web3,personal,admin' --wsorigins='*' --mine --minerthreads='1' --verbosity='0'
+RuntimeMaxSec=3600
+ExecStart=/usr/bin/geth --nodiscover --rpc --rpcaddr=0.0.0.0 --rpcapi='db,eth,net,web3,personal,admin' --rpccorsdomain='*' --ws --wsaddr=0.0.0.0 --wsapi='db,eth,net,web3,personal,admin' --wsorigins='*' --mine --minerthreads='1' --verbosity='0'
 
 [Install]
 WantedBy=default.target
 ```
 
-**Note**
+**Notes**
 
-Don't forget to change `REPLACE_THIS_WITH_THE_MACHINE_USER` line above. Run `$ whoami` to get the username.
+- Don't forget to change `REPLACE_THIS_WITH_THE_MACHINE_USER` line above. Run `$ whoami` to get the username.
+- The reason why we set `RuntimeMaxSec` to 3600 seconds (1 hour) is because we want to restart Geth every hour to minimize the memory leak problem
 
 ### Using The Geth Service
 
