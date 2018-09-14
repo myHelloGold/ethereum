@@ -24,6 +24,7 @@ WantedBy=default.target
 
 - Don't forget to change `REPLACE_THIS_WITH_THE_MACHINE_USER` line above. Run `$ whoami` to get the username.
 - The reason why we set `RuntimeMaxSec` to 3600 seconds (1 hour) is because we want to restart Geth every hour to minimize the memory leak problem
+- The `--syncmode` and `--cache` flags will make the memory leak even worse. So, better run Geth without those 2 flags.
 
 ### Using The Geth Service
 
